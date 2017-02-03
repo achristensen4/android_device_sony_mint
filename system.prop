@@ -13,7 +13,7 @@ persist.rild.nitz_short_ons_2=
 persist.rild.nitz_short_ons_3=
 ril.subscription.types=NV,RUIM
 DEVICE_PROVISIONED=1
-keyguard.no_require_sim=1
+keyguard.no_require_sim=0
 
 # system props for the data modules
 ro.use_data_netmgrd=true
@@ -23,22 +23,6 @@ ro.ril.transmitpower=true
 
 # Notify the system that the RIL only signals once
 ro.telephony.call_ring.multiple=false
-
-#
-# system props for the cne module
-#
-persist.cne.UseCne=vendor
-persist.cne.UseSwim=false
-persist.cne.bat.range.low.med=30
-persist.cne.bat.range.med.high=60
-persist.cne.loc.policy.op=/system/etc/OperatorPolicy.xml
-persist.cne.loc.policy.user=/system/etc/UserPolicy.xml
-persist.cne.bwbased.rat.sel=false
-persist.cne.snsr.based.rat.mgt=false
-persist.cne.bat.based.rat.mgt=false
-persist.cne.rat.acq.time.out=30000
-persist.cne.rat.acq.retry.tout=0
-persist.cne.nsrm.mode=false
 
 # system prop for Bluetooth SAP Profile
 ro.qualcomm.bluetooth.sap=true
@@ -66,7 +50,7 @@ debug.sf.hw=1
 debug.enabletr=true
 debug.composition.type=dyn
 debug.mdpcomp.maxlayer=3
-debug.mdpcomp.logs=0
+debug.mdpcomp.logs=1
 debug.hwc.dynThreshold=2.0
 ro.hwui.text_cache_width=2048
 
@@ -77,9 +61,7 @@ dev.pm.dyn_samplingrate=1
 ro.opengles.version=131072
 
 wifi.interface=wlan0
-wifi.supplicant_scan_interval=30
-
-ro.hardware.respect_als=true
+wifi.supplicant_scan_interval=16
 
 # System props for audio
 persist.audio.fluence.mode=endfire
